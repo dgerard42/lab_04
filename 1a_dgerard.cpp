@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <includes.h>
+
 Point::Point(){
   this->xCoord = 0;
   this->yCoord = 0;
@@ -24,8 +26,23 @@ float Point::getY(){
   return yCoord;
 }
 
-int Point::getZ(){
+float Point::getZ(){
   return zCoord;
+}
+
+void Point::setX(float xInput){
+  xCoord = xInput;
+  return;
+}
+
+void Point::setY(float yInput){
+  yCoord = yInput;
+  return;
+}
+
+void Point::setZ(float zInput){
+  zCoord = zInput;
+  return;
 }
 
 Point::Point(float xCoord, float ycoord, float zCoord){
