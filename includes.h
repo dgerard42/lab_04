@@ -12,6 +12,10 @@
 
 #include <1a_dgerard.h>
 #include <1b_dgerard.h>
+#include <2a_dgerard.h>
+#include <2b_dgerard.h>
 #include <math.h>
 
 using namespace std;
+
+const int BOARD_SIZE = 8;

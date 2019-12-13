@@ -13,6 +13,7 @@
 #include <includes.h>
 
 float Sphere::getVolume(){
+
   float volume;
 
   volume = ((4 * M_PI) * pow(radius, 3)) / 3;
@@ -20,6 +21,7 @@ float Sphere::getVolume(){
 }
 
 float Sphere::getSurfaceArea(){
+
   float surfaceArea;
 
   surfaceArea = 4 * M_PI * pow(radius, 2);
@@ -27,19 +29,23 @@ float Sphere::getSurfaceArea(){
 }
 
 Point Sphere::getCenter(){
+
     return center;
 }
 
 float Sphere::getRadius(){
+
     return radius;
 }
 
 Sphere::Sphere(float radius){
+
   center = Point(0,0,0);
   this->radius = radius;
 }
 
 Sphere::Sphere(Point center, float radius){
+
   this->center = center;
   this->radius = radius;
 }
