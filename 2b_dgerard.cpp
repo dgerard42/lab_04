@@ -10,4 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "karel.h"
 
+GameWorld::GameWorld(){
+
+  string current;
+  row = DEFAULT_ROW;
+  column = DEFAULT_COLUMN;
+  for(int height = 0; height < column; height++){
+    for (int length = 0; length < row; length++){
+      current.append(1, '.');
+    }
+  }
+  board.push_back(current);
+  current.clear();
+}
+
+GameWorld::GameWorld(int row, int column){
+
+    string current;
+    this->row = row;
+    this->column = column;
+    for(int height = 0; height < column; height++){
+      for (int length = 0; length < row; length++){
+        current.append(1, '.');
+      }
+    }
+    board.push_back(current);
+    current.clear();
+}
+
+int GameWorld::getRow(){
+
+  return row;
+}
+
+int GameWorld::getColumn(){
+
+  return column;
+}

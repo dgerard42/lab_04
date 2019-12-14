@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                  .--.                      */
-/*   1b_dgerard.h                                __/ o  ".                    */
+/*   2d_dgerard.h                                __/ o  ".                    */
 /*                                              `  ),    "-.                  */
 /*   By: dany <github.com/dgerard42>               |;;,      "-._             */
 /*                                                 ';;;,,    ",_ "=-._        */
-/*   Created: 2019/12/11 21:20:59 by dany            ':;;;;,,..-``"-._`"-.    */
-/*   Updated: 2019/12/11 21:21:00 by dany              _/_/`           `'"`   */
+/*   Created: 2019/12/13 22:21:35 by dany            ':;;;;,,..-``"-._`"-.    */
+/*   Updated: 2019/12/13 22:21:36 by dany              _/_/`           `'"`   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ONEB_DGERARD_H
-# define ONEB_DGERARD_H
+#ifndef TWOD_DGERARD_H
+# define TWOD_DGERARD_H
 
 #include "karel.h"
-
-class Sphere{
-  public:
-    Sphere(float radius);
-    Sphere(Point center, float radius);
-    Point getCenter();
-    float getRadius();
-    float getVolume();
-    float getSurfaceArea();
-
-  private:
-    Point center;
-    float radius;
-};
 
 #endif

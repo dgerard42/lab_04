@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <includes.h>
+#ifndef TWOA_DGERARD_H
+# define TWOA_DGERARD_H
+
+#include "karel.h"
 
 enum Direction{NORTH, SOUTH, EAST, WEST};
 
@@ -26,7 +29,7 @@ class Beeper{
   private:
     int row;
     int column;
-}
+};
 
 class Karel{
   public:
@@ -35,14 +38,16 @@ class Karel{
     int getRow();
     int getColumn();
     Direction getDirection();
-    bool move();
+    void move();
     void turnLeft();
-    Beeper putBeeper();
-    bool pickBeeper();
-    void safePickBeeper();
+    //void putBeeper();
+    //void pickBeeper();
+    //void safePickBeeper();
 
   private:
     int       row;
     int       column;
     Direction direction;
-}
+};
+
+#endif

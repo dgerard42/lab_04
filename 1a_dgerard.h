@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <includes.h>
+#ifndef ONEA_DGERARD_H
+# define ONEA_DGERARD_H
+
+#include "karel.h"
 
 class Point{
   public:
@@ -27,4 +30,6 @@ class Point{
     float xCoord;
     float yCoord;
     float zCoord;
-}
+};
+
+#endif

@@ -10,12 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <1a_dgerard.h>
-#include <1b_dgerard.h>
-#include <2a_dgerard.h>
-#include <2b_dgerard.h>
+#ifndef KAREL_H
+# define KAREL_H
+
+#include <string>
+#include <vector>
 #include <math.h>
+
+#include "1a_dgerard.h"
+#include "1b_dgerard.h"
+#include "2a_dgerard.h"
+#include "2b_dgerard.h"
+#include "2d_dgerard.h"
 
 using namespace std;
 
-const int BOARD_SIZE = 8;
+#endif

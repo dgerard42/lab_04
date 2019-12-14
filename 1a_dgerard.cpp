@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <includes.h>
+#include "karel.h"
 
 Point::Point(){
 
@@ -52,7 +52,7 @@ void Point::setZ(float zInput){
   return;
 }
 
-Point::Point(float xCoord, float ycoord, float zCoord){
+Point::Point(float xCoord, float yCoord, float zCoord){
 
   this->xCoord = xCoord;
   this->yCoord = yCoord;

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <includes.h>
+#include "karel.h"
 
 //BEEPER FUNCTIONS
 
@@ -36,13 +36,13 @@ int Beeper::getColumn(){
   return column;
 }
 
-void setRow(int row){
+void Beeper::setRow(int row){
 
   this->row = row;
   return;
 }
 
-void setColumn(int column){
+void Beeper::setColumn(int column){
 
   this->column = column;
   return;
@@ -79,7 +79,7 @@ Direction Karel::getDirection(){
   return direction;
 }
 
-bool Karel::move(){
+void Karel::move(){
 
   if (direction == NORTH)
     column++;
@@ -89,10 +89,6 @@ bool Karel::move(){
     row++;
   else if (direction == WEST)
     row--;
-  if (row >= BOARD_SIZE || row < 0 || column >= BOARD_SIZE || column < 0)
-    return false;
-  else
-    return true;
 }
 
 void Karel::turnLeft(){
@@ -107,22 +103,39 @@ void Karel::turnLeft(){
         direction = EAST;
 }
 
+/*
+I cannot get safeMove to work because I cannot access the board size variables
+that are supposed to be part of the GameWorld object
+
 void Karel::safeMove(){
 
-  if (column < BOARD_SIZE && direction == NORTH)
+  if (column < COLUMN_SIZE && direction == NORTH)
     column++;
   else if (column > 0 && direction == SOUTH)
     column--;
-  else if (row < BOARD_SIZE && direction == EAST)
+  else if (row < ROW_SIZE && direction == EAST)
     row++;
   else if (row > 0 && direction == WEST)
     row--;
   return;
 }
+*/
 
-Beeper  Karel::putBeeper(){
+/*
+I can't get the Beeper functions to work because I cannot access the GameWorld
+board vector
+Also I'm not sure how I would track these Beeper objects
+Or get the Karel functions to use Beeper functions
+void  Karel::putBeeper(){
 
   return Beeper(row, column);
 }
 
-bool  
+bool  Karel::pickBeeper(){
+  I would try to remove a beeper object from Karel's current location
+}
+
+void safePickBeeper(){
+  I would check to see if there is a beeper, then remove it if possible
+}
+*/

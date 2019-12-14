@@ -10,4 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef TWOB_DGERARD_H
+# define TWOB_DGERARD_H
 
+#include "karel.h"
+
+//I'm not sure why I needed these 2 lines vvv, but I did
+using std::string;
+using std::vector;
+
+class GameWorld{
+  public:
+    GameWorld();
+    GameWorld(int row, int column);
+    int getRow();
+    int getColumn();
+
+  private:
+    const int DEFAULT_ROW = 8;
+    const int DEFAULT_COLUMN = 8;
+    int row;
+    int column;
+    vector<string> board;
+};
+
+#endif
