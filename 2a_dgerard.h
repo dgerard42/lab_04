@@ -27,8 +27,8 @@ class Beeper{
     void setColumn(int column);
 
   private:
-    int row;
     int column;
+    int row;
 };
 
 class Karel{

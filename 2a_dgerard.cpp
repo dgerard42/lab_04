@@ -119,13 +119,15 @@ void Karel::safeMove(){
     row--;
   return;
 }
-*/
 
-/*
 I can't get the Beeper functions to work because I cannot access the GameWorld
 board vector
 Also I'm not sure how I would track these Beeper objects
-Or get the Karel functions to use Beeper functions
+Or get the Karel functions to use Beeper functions??
+I think I need inheritance but that would require moving the variables into
+new objects and out of the objects that they are currently supposed to be in as
+described by the lab pdf??
+
 void  Karel::putBeeper(){
 
   return Beeper(row, column);
