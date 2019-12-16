@@ -99,7 +99,7 @@ void Karel::turnLeft(){
         direction = WEST;
     else if (direction == WEST)
         direction = SOUTH;
-    else if (direction) == SOUTH)
+    else if (direction == SOUTH)
         direction = EAST;
 }
 

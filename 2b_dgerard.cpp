@@ -17,8 +17,8 @@ GameWorld::GameWorld(){
   string current;
   row = DEFAULT_ROW;
   column = DEFAULT_COLUMN;
-  for(int height = 0; height < column; height++){
-    for (int length = 0; length < row; length++){
+  for(int height = 0; height < row; height++){
+    for (int length = 0; length < column; length++){
       current.append(1, '.');
     }
   }
@@ -31,8 +31,8 @@ GameWorld::GameWorld(int row, int column){
     string current;
     this->row = row;
     this->column = column;
-    for(int height = 0; height < column; height++){
-      for (int length = 0; length < row; length++){
+    for(int height = 0; height < row; height++){
+      for (int length = 0; length < column; length++){
         current.append(1, '.');
       }
     }
@@ -48,4 +48,12 @@ int GameWorld::getRow(){
 int GameWorld::getColumn(){
 
   return column;
+}
+
+bool  GameWorld::inBounds(int row, int column){
+  if (row >= 0 && row <= this->row && column >= 0 && column <= this->column
+    && board[row][column] == '.')
+      return true;
+  else
+    return false;
 }
