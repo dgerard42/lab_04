@@ -14,8 +14,6 @@
 #include <string>
 
 using namespace std;
-const int ASCII_START = 64;
-const int ASCII_END = 127;
 
 void  onlyAdorable(string &test){
 
@@ -27,7 +25,6 @@ void  onlyAdorable(string &test){
       else
         test.erase(index, 1);
     }
-    cout << test << endl;
     return;
 }
 
@@ -37,17 +34,22 @@ int adorableCount(string test){
   string copy1 = test;
   string copy2 = test;
   string copy3 = test;
-  // cut off a little bit and recurse with tinier string
-  // return one if its uwu
-  if (test.length() < 3)
+  string copy4 = test;
+  if (test == "" || test.length() < 3)
     return 0;
   else if (test[0] == 'w' || test[0] == 'W')
     return adorableCount(copy1.erase(0, 1));
+  else if (test[1] == 'U' || test[1] == 'u')
+    return adorableCount(copy1.erase(1, 1));
+  else if (test[2] == 'w' || test[2] == 'W')
+    return adorableCount(copy1.erase(2, 1));
   else if (test.length() >= 3 && (test[0] == 'u' || test[0] == 'U')
-    && (test[1] == 'W' || test[1] == 'w') && (test[2] == 'u' || test[2] == 'U'))
+    && (test[1] == 'W' || test[1] == 'w') && (test[2] == 'u' || test[2] == 'U') &&
+    adorableCount(copy4.erase(0, 3)) == 0)
     return (1 + adorableCount(copy1.erase(0, 1)) + adorableCount(copy2.erase(1, 1)) + adorableCount(copy3.erase(2, 1)));
+  else
+    return (adorableCount(copy1.erase(0, 1)) + adorableCount(copy2.erase(1, 1)) + adorableCount(copy3.erase(2, 1)));
 }
-
 
 int main(){
 
