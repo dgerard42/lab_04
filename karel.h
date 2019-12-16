@@ -13,6 +13,7 @@
 #ifndef KAREL_H
 # define KAREL_H
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include <math.h>
@@ -21,7 +22,6 @@
 #include "1b_dgerard.h"
 #include "2a_dgerard.h"
 #include "2b_dgerard.h"
-#include "2d_dgerard.h"
 
 using namespace std;
 

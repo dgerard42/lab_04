@@ -40,6 +40,7 @@ class Karel{
     Direction getDirection();
     void move();
     void turnLeft();
+    //void safeMove();
     //void putBeeper();
     //void pickBeeper();
     //void safePickBeeper();

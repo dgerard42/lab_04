@@ -25,6 +25,9 @@ class GameWorld{
     GameWorld(int row, int column);
     int getRow();
     int getColumn();
+    bool inBounds(int row, int column);
+    bool beepersPresent(int row, int column);
+    void printWorld();
 
   private:
     const int DEFAULT_ROW = 8;

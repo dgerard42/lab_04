@@ -15,6 +15,8 @@
 
 #include "karel.h"
 
+//why are spheres a thing though????????? im confused
+
 class Sphere{
   public:
     Sphere(float radius);
